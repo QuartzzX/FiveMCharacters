@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4e82c44435.js" crossorigin="anonymous"></script>
+    <title>BeehiveRP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="navbar">
+
+        <nav>
+            <ul id="menuList">
+                <li><a href="">Home</a></li>
+                <li><a href="beehive.html" class="nav-active">BeehiveRP</a></li>
+                <li><a href="crystal.html">Crystal-M</a></li>
+
+            </ul>
+        </nav>
+
+    </div>
+
+    <div class="row">
+        <div class="col-1">
+            <h2>BeehiveRP<br>FiveM</h2>
+            <h3>A New Zealand roleplay server</h3>
+            <p>Includes: NZPD, FENZ, St John</p>
+            <p><i class="fa-solid fa-globe"></i> https://www.beehiverp.com/</p>
+
+        </div>
+        <div class="col-2">
+            <img src="images/beehivelogo.png" class="biglogo" alt="">
+            <div class="color-box"></div>
+        </div>
+    </div>
+
+
+    <div class="social-links">
+        <a href="https://www.facebook.com/BeehiveRoleplay"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://discord.gg/bhrp"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://www.youtube.com/channel/UC4eohcay_Y42EnQ4wqNSwFQ"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.instagram.com/beehive_rp"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://vm.tiktok.com/ZSdLa1nQv/"><i class="fa-brands fa-tiktok"></i></a>
+
+    </div>
+</div>
+
+<div class="line"></div>
+
+
+<!----section:3---->
+
+<section class="section2">
+    <h2>Civilian Characters</h2>
+
+
+    <div class="row2">
+        <div class="section2-col">
+            <div class="rectangle"></div>
+            <div class="dropdown">
+                <label for="select"></label><select id="select" onChange="update()">
+                    <option>Select Character</option>
+                </select>
+
+            </div>
+            <p id="civ-information">No Information</p>
+            <p id="civ-command"></p>
+
+
+        </div>
+        <div class="section2-1-col">
+            <h3>Character Notes</h3>
+            <p id="civ-notes">No Notes</p>
+        </div>
+
+
+    </div>
+    <div class="line"></div>
+
+</section>
+
+
+<!----section:2---->
+<section class="section1">
+
+    <h2>Emergency Services</h2>
+
+
+    <div class="row1">
+        <div class="rectangle1"></div>
+        <div class="section1-col">
+            <h3 id="LEO1">Police</h3>
+            <p>FivePD Police Bill of Rights<br>
+                These must be read to a suspect upon being arrested and being questioned. Improperly reading them or not
+                reading them could mean that the suspect may have to be let go, charges dropped and even in real life
+                cases, lawsuits against the NZ Police.<br><br>
+
+                The caution is as follows:<br>
+                You are being arrested/detained for (give reason)
+                You have the right to remain silent,
+                You do not have to make any statement,
+                Anything you say will be recorded and given in evidence in court.
+                You have the right to speak with a lawyer without delay and in private before deciding to answer any of
+                my questions, Police have a list of lawyers you may speak to for free.
+                Do you understand your rights?<br><br>
+
+
+                If the suspect says no, then repeat it one more time, if the suspect does not answer then read it a
+                maximum of 3 times as by then they clearly under it and are likely using their right to remain silent.
+            </p>
+
+        </div>
+        <div class="section1-col">
+            <h3 id="LEO2">FENZ</h3>
+            <p>FivePD Fire Information<br>
+                Arriving On Scene<br><br>
+
+                /hose - Get hose<br>
+                /foam - With hose out, activates foam instead of water. Use this for chemical fires<br>
+                /spreaders - Use these to get persons trapped out of their vehicle<br>
+                /stabilisers setup - Sets up stabilisers to assist with getting persons out of their vehicles
+                (/stabilisers remove - to get rid of them)<br>
+                /jack setup - Sets up airbags to lift vehicle into air, controls displayed on screen<br>
+                /watermonitor setup - Sets up a ground monitor for fires, E to turn on/off, Arrow Up/Down to change
+                height of spray<br><br>
+
+                Fire Types and what to use:<br>
+                Normal Fire - Water, Extinguisher, Foam<br>
+                Bonfire - Water, Extinguisher, Foam<br>
+                Chemical - Extinguisher or Foam (Water will make it worse)<br>
+                Electrical - Extinguisher or Foam (Water will make it worse) </p>
+
+        </div>
+        <div class="section1-col">
+            <h3 id="LEO3">St John</h3>
+            <p id="LEObody">
+                FivePD Ambulance Information<br>
+                Going on Duty<br><br>
+
+                Calls will generate from FivePD, 111 calls or other agencies requesting Ambulance assistance.
+                Using the F11 Menu, teleport to one of the Ambulance Stations.
+                To use the radio, press T to bring up your chat. Now type /radio and press enter. Right Arrow to change
+                to Channel 2 (This will be set to Channel 1 by default. Ch1 is used by Police only).
+                Press E to turn your radio on. Press T, up arrow and enter (so your chat says /radio again) to put the
+                handheld radio away. You'll still be able to transmit.
+                When talking over the radio, ensure you are not cutting anyone off, or talking over the top of them. The
+                default keybinding to talk is Left Alt.
+                Press F2 to open Vehicle Spawner, Scroll to St John, spawn the vehicles you want to use.
+                Press F10, go to Rules and find Callsigns. This will help you with what callsigns you can use.
+                Type in chat advising St John is active </p>
+
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+</section>
+
+<div class="footer">
+
+</div>
+
+
+<script src="data.js"></script>
+<script src="beehive.js"></script>
+
+</body>
+</html>
