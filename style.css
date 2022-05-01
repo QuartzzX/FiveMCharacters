@@ -4,9 +4,15 @@
     font-family: -apple-system, Arial, serif;
 }
 
+body {
+    padding: 25px;
+    background-color: white;
+    font-size: 25px;
+}
+
+
 .container {
     width: 100%;
-    min-height: 100vh;
     padding-left: 8%;
     padding-right: 8%;
     box-sizing: border-box;
@@ -232,6 +238,10 @@ h2 {
     justify-content: space-between;
 }
 
+.row1 h3{
+    font-size: 16px;
+}
+
 .section1-col {
     flex-basis: 31%;
     background: #eaeaea;
@@ -286,17 +296,22 @@ h2 {
     display: flex;
     justify-content: space-between;
 }
+.row2 h3{
+    font-size: 80%;
+}
 
 .section2-col {
     flex-basis: 31%;
     background: #eaeaea;
     border-radius: 10px;
     margin-bottom: 5%;
+    margin-right: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
     transition: 0.5s;
     height: 600px;
     text-align: justify;
+
 }
 
 
@@ -359,16 +374,6 @@ h2 {
 
 }
 
-.copy {
-    position: relative;
-    padding-left: 30px;
-    padding-top: 10px;
-}
-
-.copy:hover {
-    color: #f9760e;
-    transition: 0.2s;
-}
 
 /*---Dropdown---*/
 .dropdown select {
@@ -379,7 +384,7 @@ h2 {
     padding-left: 30px;
     font-weight: 600;
     text-align: justify;
-    font-size: 1.17em;
+    font-size: 80%;
     color: #000000;
     line-height: 1;
     border: 0;
@@ -398,9 +403,15 @@ h2 {
     outline: 0 !important;
 }
 
-#civ-command {
+#civ-command  {
     padding-top: 25px;
     padding-right: 30px;
+
+}
+
+.section2-col p{
+    height: 230px;
+    overflow: auto;
 }
 
 /*---rectangles-beehive---*/
@@ -422,8 +433,18 @@ h2 {
     height: 560px;
     width: 100%;
     z-index: -1;
-    margin-top: 20px;
+    margin-top: 5px;
     left: -200px;
+}
+
+.rectangle2 {
+    position: absolute;
+    background: linear-gradient(#d7b23c, #f83a00);
+    rotate: 0deg;
+    height: 560px;
+    width: 89.2%;
+    z-index: -1;
+    margin-top: 20px;
 }
 
 
@@ -583,6 +604,7 @@ nav2 ul li:hover::after {
     padding-bottom: 5px;
 
 
+
 }
 
 .section11-col:hover {
@@ -608,3 +630,172 @@ nav2 ul li:hover::after {
     width: 90%;
     border-radius: 500px;
 }
+
+.section1-col p{
+    max-height: 500px;
+    overflow: auto;
+}
+
+.section11-col p{
+    max-height: 500px;
+    overflow: auto;
+}
+
+/* Home Page */
+
+.section-home-col {
+    flex-basis: 50%;
+    background: #eaeaea;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    height: 600px;
+    text-align: justify;
+}
+
+.container-home {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+
+.outer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(61, 61, 61, 0.5));
+}
+.button-active {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: inherit;
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 40px;
+    margin-top: 80px;
+    padding-bottom: 40px;
+}
+
+
+button {
+    width: 20%;
+    height: 12vh;
+    padding: 15px 0;
+    font-size: 15px;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 100px;
+    font-weight: bold;
+    border: 3px solid rgba(173, 173, 173, 0.75);
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.6s;
+
+}
+
+.button1{
+    background: rgba(249, 118, 14, 0.75);
+}
+
+.button2{
+    background: rgba(0, 175, 218, 0.75);
+}
+
+
+
+
+button:hover span {
+    width: 100%;
+}
+
+
+.body-home{
+    background-image: url("images/Caltex.png");
+    background-size: cover;
+}
+
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #212323;
+    }
+
+    .row h3{
+        color: lightgray;
+    }
+    .row h2{
+        color: white;
+    }
+
+    .navbar a{
+        color: lightgray;
+    }
+
+    .social-links i {
+        color: lightgray;
+    }
+    .social-links2 i {
+        color: lightgray;
+    }
+    .section2 h2{
+        color: white;
+    }
+    .section1 h2{
+        color:white;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .section2-col, .section1-col {
+        flex-basis: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+    .section2-1-col, .section1, .color-box, .color-box2, .line {
+        display: none;
+    }
+    .row h2{
+        font-size: 32px;
+    }
+    .row h3{
+        font-size: 28px;
+    }
+
+}
+

@@ -62,3 +62,66 @@ function update() {
     document.getElementById("civ-command").innerHTML = (`/do QP '${character.name}': Lives at ${character.address.postal}, ${character.address.roadName}, ${character.address.area}, ${character.address.city}. Born on ${character.birthday}. ${getPriors(character)} ${getWarrants(character)} ${getIsKnownToPolice(character)} ${character.licence} .`)
 
 }
+
+
+/*---Vehicles---*/
+/**
+ * Gets the notes of a character from JSON.
+ * @param vehicle - The path to the JSON character to get the note of.
+ */
+function getVehicleNotes(vehicle) {
+    return (vehicle.carNotes.join("<br>")) + "."
+}
+
+/**
+ Get the formatted boolean of whether a character is known to police from JSON.
+ @param vehicle - The path to the JSON character to get the known status of.
+ */
+function getReportedStolen(vehicle) {
+    return (vehicle.reportedStolen) ? "Vehicle is Stolen" : "Vehicle is not Stolen"
+}
+
+/**
+ Get the formatted boolean of whether a character is known to police from JSON.
+ @param vehicle - The path to the JSON character to get the known status of.
+ */
+function getValidWOF(vehicle) {
+    return (vehicle.validWOF) ? "WOF Valid" : "No valid WOF"
+}
+/**
+ Get the formatted boolean of whether a character is known to police from JSON.
+ @param vehicle - The path to the JSON character to get the known status of.
+ */
+function getValidRegistration(vehicle) {
+    return (vehicle.validRego) ? "Registration Valid" : "No valid Registration"
+}
+
+function getVehicleByName(name) {
+    for (const transport of Website.Info.CrystalVehicles) {
+        if (transport.name  === name) {
+            return transport
+        }
+    }
+}
+
+Website.Info.CrystalVehicles.forEach((transport) => {
+    document.getElementById("select1").innerHTML += "<option>" + transport.name + "</option>"
+})
+
+function update2() {
+    let select1 = document.getElementById("select1")
+    let option = select1.options[select1.selectedIndex]
+    if (option.value === "Select Vehicle") {
+        document.getElementById("vehicle-information").innerHTML = "No Information"
+        return;
+
+    }
+
+    console.log(option.value)
+    let transport = getVehicleByName(option.value)
+    console.log(transport)
+    document.getElementById("vehicle-information").innerHTML = "Year: " +transport.vehicle.year + "<br>" + "Model: " + transport.vehicle.model  + "<br>" +"Make: " + transport.vehicle.make +  "<br>" +"Color: " + transport.vehicle.color + "<br>" + "Owner: " + transport.owner + "<br>" + "Plate: " + transport.plate
+    document.getElementById("vehicle-notes").innerHTML = getVehicleNotes(transport)
+    document.getElementById("vehicle-command").innerHTML = "<br>" + (`/do QVR '${transport.plate}' Registered Owner: ${transport.owner}, Vehicle Description: ${transport.vehicle.year}, ${transport.vehicle.make}, ${transport.vehicle.model}, ${transport.vehicle.color}. ${getReportedStolen(transport)}. ${getValidWOF(transport)}. ${getValidRegistration(transport)}.`)
+
+}
